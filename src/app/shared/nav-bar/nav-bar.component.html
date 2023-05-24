@@ -1,6 +1,11 @@
-<nav class="bg-white border-grey-200 dark:bg-gray-900">
-  <ul class="flex">
-    <li class="mr-6">
+<nav class="flex fixed py-2 w-screen top-0 sticky" id="nav">
+  <ul
+    class="flex-1 flex items-center justify-center mr-auto"
+    id="nav-list"
+    role="navigation"
+    aria-label="navigation"
+  >
+    <li class="mx-2">
       <a
         class="text-blue-500 hover:text-blue-800"
         ariaCurrentWhenActive="page"
@@ -10,14 +15,47 @@
         Top
       </a>
     </li>
-    <li class="mr-6">
-      <a class="text-blue-500 hover:text-blue-800" routerLink="/best">Best</a>
+    <li class="mx-2">
+      <a
+        class="text-blue-500 hover:text-blue-800"
+        ariaCurrentWhenActive="page"
+        routerLink="/best"
+        routerLinkActive="current-page"
+        >Best</a
+      >
     </li>
-    <li class="mr-6">
-      <a class="text-blue-500 hover:text-blue-800" routerLink="new">New</a>
+    <li class="mx-2">
+      <a
+        class="text-blue-500 hover:text-blue-800"
+        routerLink="new"
+        routerLinkActive="current-page"
+        >New</a
+      >
     </li>
-    <li class="mr-6"><a routerLink="ask" class="text-blue-500 hover:text-blue-800">Ask</a></li>
-    <li class="mr-6"><a routerLink="show" class="text-blue-500 hover:text-blue-800">Show</a></li>
-    <li class="mr-6"><a routerLink="profile" class="text-blue-500 hover:text-blue-800">Profile</a></li>
+    <li class="mx-2">
+      <a
+        routerLink="ask"
+        routerLinkActive="current-page"
+        class="text-blue-500 hover:text-blue-800"
+        >Ask</a
+      >
+    </li>
+    <li class="mx-2">
+      <a
+        routerLink="show"
+        routerLinkActive="current-page"
+        class="text-blue-500 hover:text-blue-800"
+        >Show</a
+      >
+    </li>
+    <li class="mx-2">
+      <a
+        routerLink="profile"
+        routerLinkActive="current-page"
+        class="text-blue-500 hover:text-blue-800"
+      >
+        <img class="profile-icon" src="assets/icons/profile.svg">
+      </a>
+    </li>
   </ul>
 </nav>

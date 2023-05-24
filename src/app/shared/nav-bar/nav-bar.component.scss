@@ -1,3 +1,28 @@
-.current-page {
-  font-size: 1.2rem;
+@import "../../../colors";
+
+a {
+  color: $color-grey-medium;
+  text-transform: uppercase;
+
+  &:hover, &.current-page {
+    color: $color-orange;
+  }
+
+  &.current-page {
+    font-size: 1.2rem;
+
+    & > img.profile-icon {
+      filter: invert(71%) sepia(43%) saturate(5315%) hue-rotate(359deg) brightness(103%) contrast(106%);
+      height: 1.2rem;
+    }
+  }
+}
+
+nav {
+  background-color: $color-grey-dark;
+}
+
+.profile-icon {
+  filter: invert(65%) sepia(9%) saturate(14%) hue-rotate(314deg) brightness(97%) contrast(84%);
+  height: 1rem;
 }

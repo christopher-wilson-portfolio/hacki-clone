@@ -1,0 +1,9 @@
+<p>{{ title }}</p>
+
+<!--Favorite Articles-->
+<app-favorite-articles></app-favorite-articles>
+
+<!--Remaining Articles-->
+<div *ngFor="let article of articles$">
+  <p>{{ article.title }}</p>
+</div>
