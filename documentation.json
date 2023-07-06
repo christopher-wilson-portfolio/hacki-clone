@@ -2,19 +2,232 @@
     "pipes": [],
     "interfaces": [
         {
-            "name": "User",
-            "id": "interface-User-9c7e5f1bbbab702cb032307d130876cb68969b0cd4eedef32a0c8cad8081a54e5f8f577ed6ad4539c1b99a1d246cb34031d198c2ea8eba440e64e91b14f01fdc",
-            "file": "src/stories/User.ts",
+            "name": "AskHN",
+            "id": "interface-AskHN-0b9760031c1f47c29efdd4fbdd9a08b7a3ba994893c5303e3f43824556a954a6f0c2cf872524523e38fd7ce623e090322689867ccc3414bbb10b1d383451e87f",
+            "file": "src/app/shared/interfaces/article.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface User {}\n",
+            "sourceCode": "export interface Item {\n  by: string;\n  dead: boolean;\n  delete: boolean;\n  descendants: number;\n  id: number;\n  kids: Array<number>;\n  parent: string;\n  poll: string;\n  score: number;\n  text: string;\n  time: number;\n  title: string;\n  type: 'comment' | 'job' | 'poll' | 'pollopt' | 'story';\n  url: string;\n}\n\nexport interface AskHN extends Item {}\n\nexport interface Comment extends Item {}\n\nexport interface Job extends Item {}\n\nexport interface Story extends Item {}\n\n",
             "properties": [],
             "indexSignatures": [],
+            "methods": [],
+            "extends": "Item"
+        },
+        {
+            "name": "Comment",
+            "id": "interface-Comment-0b9760031c1f47c29efdd4fbdd9a08b7a3ba994893c5303e3f43824556a954a6f0c2cf872524523e38fd7ce623e090322689867ccc3414bbb10b1d383451e87f",
+            "file": "src/app/shared/interfaces/article.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface Item {\n  by: string;\n  dead: boolean;\n  delete: boolean;\n  descendants: number;\n  id: number;\n  kids: Array<number>;\n  parent: string;\n  poll: string;\n  score: number;\n  text: string;\n  time: number;\n  title: string;\n  type: 'comment' | 'job' | 'poll' | 'pollopt' | 'story';\n  url: string;\n}\n\nexport interface AskHN extends Item {}\n\nexport interface Comment extends Item {}\n\nexport interface Job extends Item {}\n\nexport interface Story extends Item {}\n\n",
+            "properties": [],
+            "indexSignatures": [],
+            "methods": [],
+            "extends": "Item"
+        },
+        {
+            "name": "Item",
+            "id": "interface-Item-0b9760031c1f47c29efdd4fbdd9a08b7a3ba994893c5303e3f43824556a954a6f0c2cf872524523e38fd7ce623e090322689867ccc3414bbb10b1d383451e87f",
+            "file": "src/app/shared/interfaces/article.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface Item {\n  by: string;\n  dead: boolean;\n  delete: boolean;\n  descendants: number;\n  id: number;\n  kids: Array<number>;\n  parent: string;\n  poll: string;\n  score: number;\n  text: string;\n  time: number;\n  title: string;\n  type: 'comment' | 'job' | 'poll' | 'pollopt' | 'story';\n  url: string;\n}\n\nexport interface AskHN extends Item {}\n\nexport interface Comment extends Item {}\n\nexport interface Job extends Item {}\n\nexport interface Story extends Item {}\n\n",
+            "properties": [
+                {
+                    "name": "by",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "dead",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "delete",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "descendants",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "kids",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Array<number>",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "parent",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "poll",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "score",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "text",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "time",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "title",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "type",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "\"comment\" | \"job\" | \"poll\" | \"pollopt\" | \"story\"",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "url",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
             "methods": []
+        },
+        {
+            "name": "Job",
+            "id": "interface-Job-0b9760031c1f47c29efdd4fbdd9a08b7a3ba994893c5303e3f43824556a954a6f0c2cf872524523e38fd7ce623e090322689867ccc3414bbb10b1d383451e87f",
+            "file": "src/app/shared/interfaces/article.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface Item {\n  by: string;\n  dead: boolean;\n  delete: boolean;\n  descendants: number;\n  id: number;\n  kids: Array<number>;\n  parent: string;\n  poll: string;\n  score: number;\n  text: string;\n  time: number;\n  title: string;\n  type: 'comment' | 'job' | 'poll' | 'pollopt' | 'story';\n  url: string;\n}\n\nexport interface AskHN extends Item {}\n\nexport interface Comment extends Item {}\n\nexport interface Job extends Item {}\n\nexport interface Story extends Item {}\n\n",
+            "properties": [],
+            "indexSignatures": [],
+            "methods": [],
+            "extends": "Item"
+        },
+        {
+            "name": "Story",
+            "id": "interface-Story-0b9760031c1f47c29efdd4fbdd9a08b7a3ba994893c5303e3f43824556a954a6f0c2cf872524523e38fd7ce623e090322689867ccc3414bbb10b1d383451e87f",
+            "file": "src/app/shared/interfaces/article.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface Item {\n  by: string;\n  dead: boolean;\n  delete: boolean;\n  descendants: number;\n  id: number;\n  kids: Array<number>;\n  parent: string;\n  poll: string;\n  score: number;\n  text: string;\n  time: number;\n  title: string;\n  type: 'comment' | 'job' | 'poll' | 'pollopt' | 'story';\n  url: string;\n}\n\nexport interface AskHN extends Item {}\n\nexport interface Comment extends Item {}\n\nexport interface Job extends Item {}\n\nexport interface Story extends Item {}\n\n",
+            "properties": [],
+            "indexSignatures": [],
+            "methods": [],
+            "extends": "Item"
         }
     ],
-    "injectables": [],
+    "injectables": [
+        {
+            "name": "ArticlesService",
+            "id": "injectable-ArticlesService-44e84ebc47340bee79bc6f9647af479171bbdc852577fc00184e802a9b135bd600583edf944c984e5a9c1c0c43b91cc7cd293be8fb21cec1a387c97ac23fcb25",
+            "file": "src/app/shared/services/articles.service.ts",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "getTopArticles",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Observable<Partial[]>",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\nimport { Story } from \"../interfaces/article\";\nimport {Observable, of} from \"rxjs\";\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class ArticlesService {\n\n  constructor() { }\n\n  getTopArticles(): Observable<Partial<Story>[]> {\n    return of([\n      { title: 'Article 1',}\n    ])\n  }\n}\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "type": "injectable"
+        }
+    ],
     "guards": [],
     "interceptors": [],
     "classes": [],
@@ -69,7 +282,93 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<app-nav-bar></app-nav-bar>\n\n<router-outlet></router-outlet>\n"
+            "templateData": "<div class=\"flex flex-col\">\n  <app-nav-bar></app-nav-bar>\n\n  <router-outlet></router-outlet>\n</div>\n"
+        },
+        {
+            "name": "ArticleListsComponent",
+            "id": "component-ArticleListsComponent-1f7968de88af01264ec4d989df54926638e09c36bf435d321b46da9fd4926f28ff6dc05cfc2c689614b020b53e221bf994bfdc949508564fde8493c36dc36f92",
+            "file": "src/app/article-lists/article-lists/article-lists.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-article-lists",
+            "styleUrls": [
+                "./article-lists.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./article-lists.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "articles$",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Observable<[] | any>",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "'Article List'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component, OnInit} from '@angular/core';\nimport {ArticlesService} from \"../../shared/services/articles.service\";\nimport {Observable} from \"rxjs\";\nimport {Story} from \"../../shared/interfaces/article\";\n\n@Component({\n  selector: 'app-article-lists',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class ArticleListsComponent{\n  title = 'Article List';\n  articles$: Observable<Story[]|any>\n\n  constructor(private articlesService: ArticlesService) {\n    this.articles$ = this.articlesService.getTopArticles();\n  }\n}\n\n@Component({\n  selector: 'app-ask-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class AskArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n    //\n\n    this.title = 'ask-articles';\n  }\n}\n\n@Component({\n  selector: 'app-best-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class BestArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n    //\n\n    this.title = 'best-articles';\n  }\n}\n\n@Component({\n  selector: 'app-new-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class NewArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n\n\n    this.title = 'new-articles';\n  }\n}\n\n@Component({\n  selector: 'app-show-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class ShowArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n\n\n    this.title = 'show-articles';\n  }\n}\n\n@Component({\n  selector: 'app-top-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class TopArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n\n\n    this.title = 'top-articles';\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./article-lists.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "articlesService",
+                        "type": "ArticlesService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 13,
+                "jsdoctags": [
+                    {
+                        "name": "articlesService",
+                        "type": "ArticlesService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<p>{{ title }}</p>\n\n<!--Favorite Articles-->\n<app-favorite-articles></app-favorite-articles>\n\n<!--Remaining Articles-->\n<div *ngFor=\"let article of articles$\">\n  <p>{{ article.title }}</p>\n</div>\n"
         },
         {
             "name": "ArticlePreviewComponent",
@@ -112,101 +411,64 @@
             "templateData": "<p>article-preview works!</p>\n"
         },
         {
-            "name": "ButtonComponent",
-            "id": "component-ButtonComponent-a53fd738b978780d39fb5fcc9ae4cfe0088e57a1f6ce674862d57dab9192140bd1c05548a9910db0469a431142886e658ff2e761f15781b2ad430e58d64724d0",
-            "file": "src/stories/button.component.ts",
+            "name": "AskArticlesComponent",
+            "id": "component-AskArticlesComponent-1f7968de88af01264ec4d989df54926638e09c36bf435d321b46da9fd4926f28ff6dc05cfc2c689614b020b53e221bf994bfdc949508564fde8493c36dc36f92",
+            "file": "src/app/article-lists/article-lists/article-lists.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "storybook-button",
+            "selector": "app-ask-articles",
             "styleUrls": [
-                "./button.css"
+                "./article-lists.component.scss"
             ],
             "styles": [],
-            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\"\n >\n   {{ label }}\n </button>",
-            "templateUrl": [],
+            "templateUrl": [
+                "./article-lists.component.html"
+            ],
             "viewProviders": [],
-            "inputsClass": [
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
                 {
-                    "name": "backgroundColor",
+                    "name": "articles$",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "rawdescription": "\n\nWhat background color to use\n",
-                    "description": "<p>What background color to use</p>\n",
-                    "line": 28,
+                    "type": "Observable<[] | any>",
+                    "optional": false,
+                    "description": "",
+                    "line": 13,
+                    "inheritance": {
+                        "file": "ArticleListsComponent"
+                    }
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "'Article List'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
                     "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "label",
-                    "defaultValue": "'Button'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "pos": 786,
-                            "end": 799,
-                            "flags": 4227072,
-                            "modifierFlagsCache": 0,
-                            "transformFlags": 0,
-                            "kind": 325,
-                            "tagName": {
-                                "pos": 787,
-                                "end": 795,
-                                "flags": 4227072,
-                                "modifierFlagsCache": 0,
-                                "transformFlags": 0,
-                                "kind": 79,
-                                "escapedText": "required"
-                            },
-                            "comment": ""
-                        }
-                    ],
-                    "rawdescription": "\n\nButton contents\n\n",
-                    "description": "<p>Button contents</p>\n",
-                    "line": 42,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "primary",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
-                    "description": "<p>Is this the principal call to action on the page?</p>\n",
-                    "line": 22,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "size",
-                    "defaultValue": "'medium'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nHow large should the button be?\n",
-                    "description": "<p>How large should the button be?</p>\n",
-                    "line": 34,
-                    "type": "\"small\" | \"medium\" | \"large\"",
-                    "decorators": []
+                    "optional": false,
+                    "description": "",
+                    "line": 12,
+                    "inheritance": {
+                        "file": "ArticleListsComponent"
+                    }
                 }
             ],
-            "outputsClass": [
+            "methodsClass": [
                 {
-                    "name": "onClick",
-                    "defaultValue": "new EventEmitter<Event>()",
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 26,
                     "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nOptional click handler\n",
-                    "description": "<p>Optional click handler</p>\n",
-                    "line": 48,
-                    "type": "EventEmitter"
+                    "deprecationMessage": ""
                 }
             ],
-            "propertiesClass": [],
-            "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -214,81 +476,195 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  imports: [CommonModule],\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button.css'],\n})\nexport default class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "sourceCode": "import {Component, OnInit} from '@angular/core';\nimport {ArticlesService} from \"../../shared/services/articles.service\";\nimport {Observable} from \"rxjs\";\nimport {Story} from \"../../shared/interfaces/article\";\n\n@Component({\n  selector: 'app-article-lists',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class ArticleListsComponent{\n  title = 'Article List';\n  articles$: Observable<Story[]|any>\n\n  constructor(private articlesService: ArticlesService) {\n    this.articles$ = this.articlesService.getTopArticles();\n  }\n}\n\n@Component({\n  selector: 'app-ask-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class AskArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n    //\n\n    this.title = 'ask-articles';\n  }\n}\n\n@Component({\n  selector: 'app-best-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class BestArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n    //\n\n    this.title = 'best-articles';\n  }\n}\n\n@Component({\n  selector: 'app-new-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class NewArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n\n\n    this.title = 'new-articles';\n  }\n}\n\n@Component({\n  selector: 'app-show-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class ShowArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n\n\n    this.title = 'show-articles';\n  }\n}\n\n@Component({\n  selector: 'app-top-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class TopArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n\n\n    this.title = 'top-articles';\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
-                    "styleUrl": "./button.css"
+                    "data": "",
+                    "styleUrl": "./article-lists.component.scss"
                 }
             ],
             "stylesData": "",
-            "accessors": {
-                "classes": {
-                    "name": "classes",
-                    "getSignature": {
-                        "name": "classes",
-                        "type": "[]",
-                        "returnType": "string[]",
-                        "line": 50
-                    }
-                }
-            }
+            "extends": "ArticleListsComponent",
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>{{ title }}</p>\n\n<!--Favorite Articles-->\n<app-favorite-articles></app-favorite-articles>\n\n<!--Remaining Articles-->\n<div *ngFor=\"let article of articles$\">\n  <p>{{ article.title }}</p>\n</div>\n"
         },
         {
-            "name": "HeaderComponent",
-            "id": "component-HeaderComponent-3d494fd89671305c6be07de00e019efdf08f2e36c2169e5fb75a5acdb2841da927e3ef3cbd21cc18f478373a784b1fb90e8b63b9df4b3498a75b652bd9c37b38",
-            "file": "src/stories/header.component.ts",
+            "name": "BestArticlesComponent",
+            "id": "component-BestArticlesComponent-1f7968de88af01264ec4d989df54926638e09c36bf435d321b46da9fd4926f28ff6dc05cfc2c689614b020b53e221bf994bfdc949508564fde8493c36dc36f92",
+            "file": "src/app/article-lists/article-lists/article-lists.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "storybook-header",
+            "selector": "app-best-articles",
             "styleUrls": [
-                "./header.css"
+                "./article-lists.component.scss"
             ],
             "styles": [],
-            "template": "<header>    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>",
-            "templateUrl": [],
+            "templateUrl": [
+                "./article-lists.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "articles$",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Observable<[] | any>",
+                    "optional": false,
+                    "description": "",
+                    "line": 13,
+                    "inheritance": {
+                        "file": "ArticleListsComponent"
+                    }
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "'Article List'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 12,
+                    "inheritance": {
+                        "file": "ArticleListsComponent"
+                    }
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 39,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component, OnInit} from '@angular/core';\nimport {ArticlesService} from \"../../shared/services/articles.service\";\nimport {Observable} from \"rxjs\";\nimport {Story} from \"../../shared/interfaces/article\";\n\n@Component({\n  selector: 'app-article-lists',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class ArticleListsComponent{\n  title = 'Article List';\n  articles$: Observable<Story[]|any>\n\n  constructor(private articlesService: ArticlesService) {\n    this.articles$ = this.articlesService.getTopArticles();\n  }\n}\n\n@Component({\n  selector: 'app-ask-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class AskArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n    //\n\n    this.title = 'ask-articles';\n  }\n}\n\n@Component({\n  selector: 'app-best-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class BestArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n    //\n\n    this.title = 'best-articles';\n  }\n}\n\n@Component({\n  selector: 'app-new-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class NewArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n\n\n    this.title = 'new-articles';\n  }\n}\n\n@Component({\n  selector: 'app-show-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class ShowArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n\n\n    this.title = 'show-articles';\n  }\n}\n\n@Component({\n  selector: 'app-top-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class TopArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n\n\n    this.title = 'top-articles';\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./article-lists.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "extends": "ArticleListsComponent",
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>{{ title }}</p>\n\n<!--Favorite Articles-->\n<app-favorite-articles></app-favorite-articles>\n\n<!--Remaining Articles-->\n<div *ngFor=\"let article of articles$\">\n  <p>{{ article.title }}</p>\n</div>\n"
+        },
+        {
+            "name": "ChipsComponent",
+            "id": "component-ChipsComponent-7d85ca214149564a985d5161f8c30eaf4e00b6ec98fa1d1c0e1c6ddaf38692eaaca8cab3ef86f2f749c937065f16be425fb0f05924fff85139d15197f6e67aab",
+            "file": "src/app/shared/chips/chips.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-chips",
+            "styleUrls": [
+                "./chips.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./chips.component.html"
+            ],
             "viewProviders": [],
             "inputsClass": [
                 {
-                    "name": "user",
-                    "defaultValue": "null",
+                    "name": "label",
+                    "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 65,
-                    "type": "User | null",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "link",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
                     "decorators": []
                 }
             ],
-            "outputsClass": [
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
                 {
-                    "name": "onCreateAccount",
-                    "defaultValue": "new EventEmitter<Event>()",
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13,
                     "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 74,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogin",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 68,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogout",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 71,
-                    "type": "EventEmitter"
+                    "deprecationMessage": ""
                 }
             ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component, Input, OnInit} from '@angular/core';\n\n\n@Component({\n  selector: 'app-chips',\n  templateUrl: './chips.component.html',\n  styleUrls: ['./chips.component.scss']\n})\nexport class ChipsComponent implements OnInit {\n  @Input() label: string = '';\n  @Input() link: string = '';\n\n  ngOnInit() {}\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./chips.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<li class=\"mx-2\">\n  <a [routerLink]=\"link\" class=\"text-blue-500 hover:text-blue-800\">{{ label }}</a>\n</li>\n"
+        },
+        {
+            "name": "FavoriteArticlesComponent",
+            "id": "component-FavoriteArticlesComponent-027bdfe6bd51642d2b26cc75d6f9674f29b57be21b0ff09360f2a9185b8d04c694108706dd32412278f4a6d0cba52d7adbe52599e623c52caa6bedad3901ef12",
+            "file": "src/app/settings/favorite-articles/favorite-articles.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-favorite-articles",
+            "styleUrls": [
+                "./favorite-articles.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./favorite-articles.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [],
             "deprecated": false,
@@ -298,15 +674,59 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport type { User } from './User';\n\n@Component({\n  selector: 'storybook-header',\n  template: `<header>\n    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>`,\n  styleUrls: ['./header.css'],\n})\nexport default class HeaderComponent {\n  @Input()\n  user: User | null = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-favorite-articles',\n  templateUrl: './favorite-articles.component.html',\n  styleUrls: ['./favorite-articles.component.scss']\n})\nexport class FavoriteArticlesComponent {\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".storybook-header {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.storybook-header svg {\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-header h1 {\n  font-weight: 700;\n  font-size: 20px;\n  line-height: 1;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-header button + button {\n  margin-left: 10px;\n}\n\n.storybook-header .welcome {\n  color: #333;\n  font-size: 14px;\n  margin-right: 10px;\n}\n",
-                    "styleUrl": "./header.css"
+                    "data": "",
+                    "styleUrl": "./favorite-articles.component.scss"
                 }
             ],
-            "stylesData": ""
+            "stylesData": "",
+            "templateData": "<p>favorite-articles works!</p>\n"
+        },
+        {
+            "name": "FavoriteArticlesComponent",
+            "id": "component-FavoriteArticlesComponent-027bdfe6bd51642d2b26cc75d6f9674f29b57be21b0ff09360f2a9185b8d04c694108706dd32412278f4a6d0cba52d7adbe52599e623c52caa6bedad3901ef12-1",
+            "file": "src/app/shared/components/favorite-articles/favorite-articles.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-favorite-articles",
+            "styleUrls": [
+                "./favorite-articles.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./favorite-articles.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-favorite-articles',\n  templateUrl: './favorite-articles.component.html',\n  styleUrls: ['./favorite-articles.component.scss']\n})\nexport class FavoriteArticlesComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./favorite-articles.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "FavoriteArticlesComponent-1",
+            "templateData": "<p>favorite-articles works!</p>\n"
         },
         {
             "name": "NavBarComponent",
@@ -341,72 +761,68 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".current-page {\n  font-size: 1.2rem;\n}\n",
+                    "data": "@import \"../../../colors\";\n\na {\n  color: $color-grey-medium;\n  text-transform: uppercase;\n\n  &:hover, &.current-page {\n    color: $color-orange;\n  }\n\n  &.current-page {\n    font-size: 1.2rem;\n\n    & > img.profile-icon {\n      filter: invert(71%) sepia(43%) saturate(5315%) hue-rotate(359deg) brightness(103%) contrast(106%);\n      height: 1.2rem;\n    }\n  }\n}\n\nnav {\n  background-color: $color-grey-dark;\n}\n\n.profile-icon {\n  filter: invert(65%) sepia(9%) saturate(14%) hue-rotate(314deg) brightness(97%) contrast(84%);\n  height: 1rem;\n}\n",
                     "styleUrl": "./nav-bar.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<nav class=\"bg-white border-grey-200 dark:bg-gray-900\">\n  <ul class=\"flex\">\n    <li class=\"mr-6\">\n      <a\n        class=\"text-blue-500 hover:text-blue-800\"\n        ariaCurrentWhenActive=\"page\"\n        routerLink=\"/top\"\n        routerLinkActive=\"current-page\"\n      >\n        Top\n      </a>\n    </li>\n    <li class=\"mr-6\">\n      <a class=\"text-blue-500 hover:text-blue-800\" routerLink=\"/best\">Best</a>\n    </li>\n    <li class=\"mr-6\">\n      <a class=\"text-blue-500 hover:text-blue-800\" routerLink=\"new\">New</a>\n    </li>\n    <li class=\"mr-6\"><a routerLink=\"ask\" class=\"text-blue-500 hover:text-blue-800\">Ask</a></li>\n    <li class=\"mr-6\"><a routerLink=\"show\" class=\"text-blue-500 hover:text-blue-800\">Show</a></li>\n    <li class=\"mr-6\"><a routerLink=\"profile\" class=\"text-blue-500 hover:text-blue-800\">Profile</a></li>\n  </ul>\n</nav>\n"
+            "templateData": "<nav class=\"flex fixed py-2 w-screen top-0 sticky\" id=\"nav\">\n  <ul\n    class=\"flex-1 flex items-center justify-center mr-auto\"\n    id=\"nav-list\"\n    role=\"navigation\"\n    aria-label=\"navigation\"\n  >\n    <li class=\"mx-2\">\n      <a\n        class=\"text-blue-500 hover:text-blue-800\"\n        ariaCurrentWhenActive=\"page\"\n        routerLink=\"/top\"\n        routerLinkActive=\"current-page\"\n      >\n        Top\n      </a>\n    </li>\n    <li class=\"mx-2\">\n      <a\n        class=\"text-blue-500 hover:text-blue-800\"\n        ariaCurrentWhenActive=\"page\"\n        routerLink=\"/best\"\n        routerLinkActive=\"current-page\"\n        >Best</a\n      >\n    </li>\n    <li class=\"mx-2\">\n      <a\n        class=\"text-blue-500 hover:text-blue-800\"\n        routerLink=\"new\"\n        routerLinkActive=\"current-page\"\n        >New</a\n      >\n    </li>\n    <li class=\"mx-2\">\n      <a\n        routerLink=\"ask\"\n        routerLinkActive=\"current-page\"\n        class=\"text-blue-500 hover:text-blue-800\"\n        >Ask</a\n      >\n    </li>\n    <li class=\"mx-2\">\n      <a\n        routerLink=\"show\"\n        routerLinkActive=\"current-page\"\n        class=\"text-blue-500 hover:text-blue-800\"\n        >Show</a\n      >\n    </li>\n    <li class=\"mx-2\">\n      <a\n        routerLink=\"profile\"\n        routerLinkActive=\"current-page\"\n        class=\"text-blue-500 hover:text-blue-800\"\n      >\n        <img class=\"profile-icon\" src=\"assets/icons/profile.svg\">\n      </a>\n    </li>\n  </ul>\n</nav>\n"
         },
         {
-            "name": "PageComponent",
-            "id": "component-PageComponent-badb6d8cee577661da79ba82ad8f599604afd40fa34e36c7b88d71d77a4fbc7184228cba2f0d73e255d0b7bc51c4c7a8e7b0128b3624aeb0255abab9030fa59a",
-            "file": "src/stories/page.component.ts",
+            "name": "NewArticlesComponent",
+            "id": "component-NewArticlesComponent-1f7968de88af01264ec4d989df54926638e09c36bf435d321b46da9fd4926f28ff6dc05cfc2c689614b020b53e221bf994bfdc949508564fde8493c36dc36f92",
+            "file": "src/app/article-lists/article-lists/article-lists.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "storybook-page",
+            "selector": "app-new-articles",
             "styleUrls": [
-                "./page.css"
+                "./article-lists.component.scss"
             ],
             "styles": [],
-            "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
-            "templateUrl": [],
+            "templateUrl": [
+                "./article-lists.component.html"
+            ],
             "viewProviders": [],
             "inputsClass": [],
             "outputsClass": [],
             "propertiesClass": [
                 {
-                    "name": "user",
-                    "defaultValue": "null",
+                    "name": "articles$",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "User | null",
+                    "type": "Observable<[] | any>",
                     "optional": false,
                     "description": "",
-                    "line": 64
+                    "line": 13,
+                    "inheritance": {
+                        "file": "ArticleListsComponent"
+                    }
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "'Article List'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 12,
+                    "inheritance": {
+                        "file": "ArticleListsComponent"
+                    }
                 }
             ],
             "methodsClass": [
                 {
-                    "name": "doCreateAccount",
+                    "name": "ngOnInit",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 74,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "doLogin",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 70,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "doLogout",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 66,
+                    "line": 52,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -418,15 +834,100 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport type { User } from './User';\n\n@Component({\n  selector: 'storybook-page',\n  template: `<article>\n    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n  styleUrls: ['./page.css'],\n})\nexport default class PageComponent {\n  user: User | null = null;\n\n  doLogout() {\n    this.user = null;\n  }\n\n  doLogin() {\n    this.user = { name: 'Jane Doe' };\n  }\n\n  doCreateAccount() {\n    this.user = { name: 'Jane Doe' };\n  }\n}\n",
+            "sourceCode": "import {Component, OnInit} from '@angular/core';\nimport {ArticlesService} from \"../../shared/services/articles.service\";\nimport {Observable} from \"rxjs\";\nimport {Story} from \"../../shared/interfaces/article\";\n\n@Component({\n  selector: 'app-article-lists',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class ArticleListsComponent{\n  title = 'Article List';\n  articles$: Observable<Story[]|any>\n\n  constructor(private articlesService: ArticlesService) {\n    this.articles$ = this.articlesService.getTopArticles();\n  }\n}\n\n@Component({\n  selector: 'app-ask-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class AskArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n    //\n\n    this.title = 'ask-articles';\n  }\n}\n\n@Component({\n  selector: 'app-best-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class BestArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n    //\n\n    this.title = 'best-articles';\n  }\n}\n\n@Component({\n  selector: 'app-new-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class NewArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n\n\n    this.title = 'new-articles';\n  }\n}\n\n@Component({\n  selector: 'app-show-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class ShowArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n\n\n    this.title = 'show-articles';\n  }\n}\n\n@Component({\n  selector: 'app-top-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class TopArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n\n\n    this.title = 'top-articles';\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".storybook-page {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  padding: 48px 20px;\n  margin: 0 auto;\n  max-width: 600px;\n  color: #333;\n}\n\n.storybook-page h2 {\n  font-weight: 700;\n  font-size: 32px;\n  line-height: 1;\n  margin: 0 0 4px;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-page p {\n  margin: 1em 0;\n}\n\n.storybook-page a {\n  text-decoration: none;\n  color: #1ea7fd;\n}\n\n.storybook-page ul {\n  padding-left: 30px;\n  margin: 1em 0;\n}\n\n.storybook-page li {\n  margin-bottom: 8px;\n}\n\n.storybook-page .tip {\n  display: inline-block;\n  border-radius: 1em;\n  font-size: 11px;\n  line-height: 12px;\n  font-weight: 700;\n  background: #e7fdd8;\n  color: #66bf3c;\n  padding: 4px 12px;\n  margin-right: 10px;\n  vertical-align: top;\n}\n\n.storybook-page .tip-wrapper {\n  font-size: 13px;\n  line-height: 20px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n\n.storybook-page .tip-wrapper svg {\n  display: inline-block;\n  height: 12px;\n  width: 12px;\n  margin-right: 4px;\n  vertical-align: top;\n  margin-top: 3px;\n}\n\n.storybook-page .tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n",
-                    "styleUrl": "./page.css"
+                    "data": "",
+                    "styleUrl": "./article-lists.component.scss"
                 }
             ],
-            "stylesData": ""
+            "stylesData": "",
+            "extends": "ArticleListsComponent",
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>{{ title }}</p>\n\n<!--Favorite Articles-->\n<app-favorite-articles></app-favorite-articles>\n\n<!--Remaining Articles-->\n<div *ngFor=\"let article of articles$\">\n  <p>{{ article.title }}</p>\n</div>\n"
+        },
+        {
+            "name": "SearchComponent",
+            "id": "component-SearchComponent-5fd5457bcf7328941fdd97c2838828c0e427c18462bb3025be734fe78e2ab3fbccedda47b33176def0b3b9db3b411057013a1cc495e04e87a468683cccd8a3f3",
+            "file": "src/app/settings/search/search.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-search",
+            "styleUrls": [
+                "./search.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./search.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-search',\n  templateUrl: './search.component.html',\n  styleUrls: ['./search.component.scss']\n})\nexport class SearchComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./search.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<p>search works!</p>\n"
+        },
+        {
+            "name": "SettingsComponent",
+            "id": "component-SettingsComponent-23d21e11c25d8d90beba88a0019b923d655900f4c6e0ea564a2e02bc5f2a208bd00e161d02993cd1ddb2fc449e8cf88634aa1f56e59819d0cd8a7826b0e4b36d",
+            "file": "src/app/settings/settings/settings.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-settings",
+            "styleUrls": [
+                "./settings.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./settings.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-settings',\n  templateUrl: './settings.component.html',\n  styleUrls: ['./settings.component.scss']\n})\nexport class SettingsComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./settings.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<p>settings works!</p>\n"
         },
         {
             "name": "SettingsMainComponent",
@@ -466,30 +967,67 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<p>settings-main works!</p>\n"
+            "templateData": "<nav class=\"w-screen top-0 sticky\" id=\"nav\">\n  <ul class=\"flex justify-center mr-auto\" id=\"nav-list\" role=\"navigation\" aria-label=\"navigation\">\n<!--    <app-chips label=\"Favorites\" link=\"favorites\"></app-chips>-->\n<!--    <app-chips label=\"Search\" link=\"search\"></app-chips>-->\n<!--    <app-chips label=\"Settings\" link=\"settings\"></app-chips>-->\n  </ul>\n</nav>\n\n"
         },
         {
-            "name": "TopArticlesComponent",
-            "id": "component-TopArticlesComponent-857328e19b08b0bd696ee34bf66f2f41647e12a8c916df3b92d4a6a0a82f97024eec512255f26596ebd072fe5dd6e3cf3a94db0d40db00b589efbb740f32f266",
-            "file": "src/app/article-lists/top-articles/top-articles.component.ts",
+            "name": "ShowArticlesComponent",
+            "id": "component-ShowArticlesComponent-1f7968de88af01264ec4d989df54926638e09c36bf435d321b46da9fd4926f28ff6dc05cfc2c689614b020b53e221bf994bfdc949508564fde8493c36dc36f92",
+            "file": "src/app/article-lists/article-lists/article-lists.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-top-articles",
+            "selector": "app-show-articles",
             "styleUrls": [
-                "./top-articles.component.scss"
+                "./article-lists.component.scss"
             ],
             "styles": [],
             "templateUrl": [
-                "./top-articles.component.html"
+                "./article-lists.component.html"
             ],
             "viewProviders": [],
             "inputsClass": [],
             "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "articles$",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Observable<[] | any>",
+                    "optional": false,
+                    "description": "",
+                    "line": 13,
+                    "inheritance": {
+                        "file": "ArticleListsComponent"
+                    }
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "'Article List'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 12,
+                    "inheritance": {
+                        "file": "ArticleListsComponent"
+                    }
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 65,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -497,16 +1035,101 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-top-articles',\n  templateUrl: './top-articles.component.html',\n  styleUrls: ['./top-articles.component.scss']\n})\nexport class TopArticlesComponent {\n\n}\n",
+            "sourceCode": "import {Component, OnInit} from '@angular/core';\nimport {ArticlesService} from \"../../shared/services/articles.service\";\nimport {Observable} from \"rxjs\";\nimport {Story} from \"../../shared/interfaces/article\";\n\n@Component({\n  selector: 'app-article-lists',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class ArticleListsComponent{\n  title = 'Article List';\n  articles$: Observable<Story[]|any>\n\n  constructor(private articlesService: ArticlesService) {\n    this.articles$ = this.articlesService.getTopArticles();\n  }\n}\n\n@Component({\n  selector: 'app-ask-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class AskArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n    //\n\n    this.title = 'ask-articles';\n  }\n}\n\n@Component({\n  selector: 'app-best-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class BestArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n    //\n\n    this.title = 'best-articles';\n  }\n}\n\n@Component({\n  selector: 'app-new-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class NewArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n\n\n    this.title = 'new-articles';\n  }\n}\n\n@Component({\n  selector: 'app-show-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class ShowArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n\n\n    this.title = 'show-articles';\n  }\n}\n\n@Component({\n  selector: 'app-top-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class TopArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n\n\n    this.title = 'top-articles';\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
                     "data": "",
-                    "styleUrl": "./top-articles.component.scss"
+                    "styleUrl": "./article-lists.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<p>top-articles works!</p>\n"
+            "extends": "ArticleListsComponent",
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>{{ title }}</p>\n\n<!--Favorite Articles-->\n<app-favorite-articles></app-favorite-articles>\n\n<!--Remaining Articles-->\n<div *ngFor=\"let article of articles$\">\n  <p>{{ article.title }}</p>\n</div>\n"
+        },
+        {
+            "name": "TopArticlesComponent",
+            "id": "component-TopArticlesComponent-1f7968de88af01264ec4d989df54926638e09c36bf435d321b46da9fd4926f28ff6dc05cfc2c689614b020b53e221bf994bfdc949508564fde8493c36dc36f92",
+            "file": "src/app/article-lists/article-lists/article-lists.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-top-articles",
+            "styleUrls": [
+                "./article-lists.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./article-lists.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "articles$",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Observable<[] | any>",
+                    "optional": false,
+                    "description": "",
+                    "line": 13,
+                    "inheritance": {
+                        "file": "ArticleListsComponent"
+                    }
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "'Article List'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 12,
+                    "inheritance": {
+                        "file": "ArticleListsComponent"
+                    }
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 78,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component, OnInit} from '@angular/core';\nimport {ArticlesService} from \"../../shared/services/articles.service\";\nimport {Observable} from \"rxjs\";\nimport {Story} from \"../../shared/interfaces/article\";\n\n@Component({\n  selector: 'app-article-lists',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class ArticleListsComponent{\n  title = 'Article List';\n  articles$: Observable<Story[]|any>\n\n  constructor(private articlesService: ArticlesService) {\n    this.articles$ = this.articlesService.getTopArticles();\n  }\n}\n\n@Component({\n  selector: 'app-ask-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class AskArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n    //\n\n    this.title = 'ask-articles';\n  }\n}\n\n@Component({\n  selector: 'app-best-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class BestArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n    //\n\n    this.title = 'best-articles';\n  }\n}\n\n@Component({\n  selector: 'app-new-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class NewArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n\n\n    this.title = 'new-articles';\n  }\n}\n\n@Component({\n  selector: 'app-show-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class ShowArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n\n\n    this.title = 'show-articles';\n  }\n}\n\n@Component({\n  selector: 'app-top-articles',\n  templateUrl: './article-lists.component.html',\n  styleUrls: ['./article-lists.component.scss']\n})\nexport class TopArticlesComponent extends ArticleListsComponent implements OnInit {\n  ngOnInit() {\n\n\n    this.title = 'top-articles';\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./article-lists.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "extends": "ArticleListsComponent",
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>{{ title }}</p>\n\n<!--Favorite Articles-->\n<app-favorite-articles></app-favorite-articles>\n\n<!--Remaining Articles-->\n<div *ngFor=\"let article of articles$\">\n  <p>{{ article.title }}</p>\n</div>\n"
         }
     ],
     "modules": [
@@ -563,13 +1186,13 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-a6b900b9b001fe9997421aa82f0aaf7710b48e60bbbc63295fa9ad5a623eba68deb72a2b4b39fe5cd528cc9c27a6f6aaa5a34a4cd290bcd9fc1bf6a6d6de7c6a",
+            "id": "module-AppRoutingModule-48d7d79178900d6e38bbdb2fb715833474993264ce6fcb779471da637bcb50f2125e44788d7e23c901f7d2a9e185d173d8913ce7bcdf1ebd429bd6215b811568",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app-routing.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport {TopArticlesComponent} from \"./article-lists/top-articles/top-articles.component\";\n\nconst routes: Routes = [\n  {path: 'top', component: TopArticlesComponent},\n  {path: '', redirectTo: '/top', pathMatch: 'full'},\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { SettingsMainComponent } from \"./settings/settings-main/settings-main.component\";\nimport {\n  AskArticlesComponent,\n  BestArticlesComponent,\n  NewArticlesComponent,\n  ShowArticlesComponent,\n  TopArticlesComponent,\n} from \"./article-lists/article-lists/article-lists.component\";\n\nconst routes: Routes = [\n  {path: 'ask', component: AskArticlesComponent},\n  {path: 'best', component: BestArticlesComponent},\n  {path: 'new', component: NewArticlesComponent},\n  {path: 'show', component: ShowArticlesComponent},\n  {\n    path: 'profile', component: SettingsMainComponent,\n    loadChildren: () => \"import('./settings/settings-routing.module').then(m => m.SettingsRoutingModule)\"\n  },\n  {path: 'top', component: TopArticlesComponent},\n  {path: '', redirectTo: '/top', pathMatch: 'full'},\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -599,13 +1222,13 @@
         },
         {
             "name": "ArticleListsModule",
-            "id": "module-ArticleListsModule-738f1fec92e4876a1a5c04e8ad07d56929ca2d1799c9d16e85ca72316b218ebfc56d8773e6be83e360763e56066cb90e978ec124cccf0c4feab6fc21eab44cb7",
+            "id": "module-ArticleListsModule-24d3e4beea74f8bc6fd1bd65f2e1354559966debafc196390626334df14d11b0d680db7654740ecf87007c171fdeee3b06186991f4663b87812f2fd6aa51f18b",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/article-lists/article-lists.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { TopArticlesComponent } from './top-articles/top-articles.component';\n\n\n\n@NgModule({\n  declarations: [\n    TopArticlesComponent\n  ],\n  imports: [\n    CommonModule\n  ]\n})\nexport class ArticleListsModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport {\n  ArticleListsComponent,\n  AskArticlesComponent,\n  BestArticlesComponent,\n  NewArticlesComponent,\n  ShowArticlesComponent,\n  TopArticlesComponent,\n} from './article-lists/article-lists.component';\nimport { SharedModule } from '../shared/shared.module';\n\n@NgModule({\n  declarations: [\n    ArticleListsComponent,\n    AskArticlesComponent,\n    BestArticlesComponent,\n    NewArticlesComponent,\n    ShowArticlesComponent,\n    TopArticlesComponent,\n  ],\n  imports: [CommonModule, SharedModule],\n})\nexport class ArticleListsModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -615,13 +1238,32 @@
                     "type": "declarations",
                     "elements": [
                         {
+                            "name": "ArticleListsComponent"
+                        },
+                        {
+                            "name": "AskArticlesComponent"
+                        },
+                        {
+                            "name": "BestArticlesComponent"
+                        },
+                        {
+                            "name": "NewArticlesComponent"
+                        },
+                        {
+                            "name": "ShowArticlesComponent"
+                        },
+                        {
                             "name": "TopArticlesComponent"
                         }
                     ]
                 },
                 {
                     "type": "imports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "SharedModule"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
@@ -639,13 +1281,13 @@
         },
         {
             "name": "SettingsModule",
-            "id": "module-SettingsModule-1947a5fa750d91cb57c605bdc01371a882546b5490a05978c83732925fb3f9e08df04fac17cbe4cdafb0898263fa53087bf0bff56cd57db8503501bd0abdb6a9",
+            "id": "module-SettingsModule-949a0103a1f3ed3499ecb145061e290f58d6296f648f6416a0cb7c1ac1659b41f1116c40ca6aa2a6bdacdf03711bdad22206b9dc58c51e296982f7e71c19116f",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/settings/settings.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { SettingsMainComponent } from './settings-main/settings-main.component';\n\n\n\n@NgModule({\n  declarations: [\n    SettingsMainComponent\n  ],\n  imports: [\n    CommonModule\n  ]\n})\nexport class SettingsModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { SettingsMainComponent } from './settings-main/settings-main.component';\nimport { FavoriteArticlesComponent } from './favorite-articles/favorite-articles.component';\nimport { SearchComponent } from './search/search.component';\nimport { SettingsComponent } from './settings/settings.component';\nimport {RouterModule} from \"@angular/router\";\nimport {SharedModule} from \"../shared/shared.module\";\nimport {SettingsRoutingModule} from \"./settings-routing.module\";\n\n\n@NgModule({\n  declarations: [\n    SettingsMainComponent,\n    FavoriteArticlesComponent,\n    SearchComponent,\n    SettingsComponent,\n  ],\n  imports: [\n    CommonModule,\n    RouterModule,\n    SettingsRoutingModule,\n    SharedModule,\n  ]\n})\nexport class SettingsModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -655,9 +1297,61 @@
                     "type": "declarations",
                     "elements": [
                         {
+                            "name": "FavoriteArticlesComponent"
+                        },
+                        {
+                            "name": "SearchComponent"
+                        },
+                        {
+                            "name": "SettingsComponent"
+                        },
+                        {
                             "name": "SettingsMainComponent"
                         }
                     ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "SettingsRoutingModule"
+                        },
+                        {
+                            "name": "SharedModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "SettingsRoutingModule",
+            "id": "module-SettingsRoutingModule-447068b68ef0ad3b4cf9d44ee012d638528b127a1decd60ecc6a5e32063b9fb602a37ffbeb84a36635388db5cc0306a1863521bc0eb685b67e659d8482af3c78",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/settings/settings-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import {NgModule} from \"@angular/core\";\nimport {RouterModule, Routes} from \"@angular/router\";\nimport {FavoriteArticlesComponent} from \"./favorite-articles/favorite-articles.component\";\nimport {SearchComponent} from \"./search/search.component\";\nimport {SettingsComponent} from \"./settings/settings.component\";\n\nconst routes: Routes = [\n  {path: 'favorite', component: FavoriteArticlesComponent},\n  {path: 'search', component: SearchComponent},\n  {path: 'settings', component: SettingsComponent},\n]\n\n@NgModule({\n  imports: [ RouterModule.forChild(routes)],\n  exports: [RouterModule],\n})\nexport class SettingsRoutingModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
                 },
                 {
                     "type": "imports",
@@ -679,13 +1373,13 @@
         },
         {
             "name": "SharedModule",
-            "id": "module-SharedModule-e0965036e21fa812edfc816ebfc14f69798bf585ba98ffb5be2bac7b47d906e6052a413aa819bc7e8b36abb47a05900fa714b3a3da5cb0402cdb0f75b03cf244",
+            "id": "module-SharedModule-57498e2eb01602bf86fe3492a41389ee7c3384ce8ec2eb1449af6e5879bcc7a428e9ee219a1722c61beb53007bd02020f07a4657e6acd024c35b2b438bd99165",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/shared/shared.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ArticlePreviewComponent } from './article-preview/article-preview.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\n\n\n\n@NgModule({\n    declarations: [\n        ArticlePreviewComponent,\n        NavBarComponent\n    ],\n    exports: [\n        NavBarComponent\n    ],\n    imports: [\n        CommonModule\n    ]\n})\nexport class SharedModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ArticlePreviewComponent } from './article-preview/article-preview.component';\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\nimport { AppRoutingModule } from '../app-routing.module';\nimport { ChipsComponent } from './chips/chips.component';\nimport { FavoriteArticlesComponent } from './components/favorite-articles/favorite-articles.component';\n\n@NgModule({\n  declarations: [\n    ArticlePreviewComponent,\n    NavBarComponent,\n    ChipsComponent,\n    FavoriteArticlesComponent,\n  ],\n  exports: [\n    NavBarComponent,\n    ChipsComponent,\n    CommonModule,\n    FavoriteArticlesComponent,\n  ],\n  imports: [CommonModule, AppRoutingModule],\n})\nexport class SharedModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -698,17 +1392,33 @@
                             "name": "ArticlePreviewComponent"
                         },
                         {
+                            "name": "ChipsComponent"
+                        },
+                        {
+                            "name": "FavoriteArticlesComponent"
+                        },
+                        {
                             "name": "NavBarComponent"
                         }
                     ]
                 },
                 {
                     "type": "imports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "AppRoutingModule"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
                     "elements": [
+                        {
+                            "name": "ChipsComponent"
+                        },
+                        {
+                            "name": "FavoriteArticlesComponent"
+                        },
                         {
                             "name": "NavBarComponent"
                         }
@@ -728,86 +1438,6 @@
     "miscellaneous": {
         "variables": [
             {
-                "name": "Large",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
-            },
-            {
-                "name": "LoggedIn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
-            },
-            {
-                "name": "LoggedIn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = await canvas.getByRole('button', {\n      name: /Log in/i,\n    });\n    await userEvent.click(loginButton);\n  },\n}"
-            },
-            {
-                "name": "LoggedOut",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{}"
-            },
-            {
-                "name": "LoggedOut",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<Button>",
-                "defaultValue": "{\n  title: 'Example/Button',\n  component: Button,\n  tags: ['autodocs'],\n  render: (args: Button) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<Header>",
-                "defaultValue": "{\n  title: 'Example/Header',\n  component: Header,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [Button],\n      imports: [CommonModule],\n    }),\n  ],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<Page>",
-                "defaultValue": "{\n  title: 'Example/Page',\n  component: Page,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n  decorators: [\n    moduleMetadata({\n      declarations: [Button, Header],\n      imports: [CommonModule],\n    }),\n  ],\n}"
-            },
-            {
                 "name": "preview",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -816,192 +1446,12 @@
                 "deprecationMessage": "",
                 "type": "Preview",
                 "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
-            },
-            {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
-            },
-            {
-                "name": "Secondary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
-            },
-            {
-                "name": "Small",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
             }
         ],
         "functions": [],
-        "typealiases": [
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<Button>",
-                "file": "src/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 177
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<Header>",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 177
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<Page>",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 177
-            }
-        ],
+        "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "src/stories/Button.stories.ts": [
-                {
-                    "name": "Large",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<Button>",
-                    "defaultValue": "{\n  title: 'Example/Button',\n  component: Button,\n  tags: ['autodocs'],\n  render: (args: Button) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n}"
-                },
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
-                },
-                {
-                    "name": "Secondary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
-                },
-                {
-                    "name": "Small",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
-                }
-            ],
-            "src/stories/Header.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<Header>",
-                    "defaultValue": "{\n  title: 'Example/Header',\n  component: Header,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [Button],\n      imports: [CommonModule],\n    }),\n  ],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
-                }
-            ],
-            "src/stories/Page.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = await canvas.getByRole('button', {\n      name: /Log in/i,\n    });\n    await userEvent.click(loginButton);\n  },\n}"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<Page>",
-                    "defaultValue": "{\n  title: 'Example/Page',\n  component: Page,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n  decorators: [\n    moduleMetadata({\n      declarations: [Button, Header],\n      imports: [CommonModule],\n    }),\n  ],\n}"
-                }
-            ],
             ".storybook/preview.ts": [
                 {
                     "name": "preview",
@@ -1017,74 +1467,11 @@
         },
         "groupedFunctions": {},
         "groupedEnumerations": {},
-        "groupedTypeAliases": {
-            "src/stories/Button.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<Button>",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 177
-                }
-            ],
-            "src/stories/Header.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<Header>",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 177
-                }
-            ],
-            "src/stories/Page.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<Page>",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 177
-                }
-            ]
-        }
+        "groupedTypeAliases": {}
     },
-    "routes": {
-        "name": "<root>",
-        "kind": "module",
-        "className": "AppModule",
-        "children": [
-            {
-                "name": "routes",
-                "filename": "src/app/app-routing.module.ts",
-                "module": "AppRoutingModule",
-                "children": [
-                    {
-                        "path": "top",
-                        "component": "TopArticlesComponent"
-                    },
-                    {
-                        "path": "",
-                        "redirectTo": "/top",
-                        "pathMatch": "full"
-                    }
-                ],
-                "kind": "module"
-            }
-        ]
-    },
+    "routes": [],
     "coverage": {
-        "count": 3,
+        "count": 0,
         "status": "low",
         "files": [
             {
@@ -1107,10 +1494,73 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/article-lists/top-articles/top-articles.component.ts",
+                "filePath": "src/app/article-lists/article-lists/article-lists.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ArticleListsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/article-lists/article-lists/article-lists.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AskArticlesComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/article-lists/article-lists/article-lists.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "BestArticlesComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/article-lists/article-lists/article-lists.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NewArticlesComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/article-lists/article-lists/article-lists.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ShowArticlesComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/article-lists/article-lists/article-lists.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "TopArticlesComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/settings/favorite-articles/favorite-articles.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FavoriteArticlesComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/settings/search/search.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SearchComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -1125,10 +1575,82 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/settings/settings/settings.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SettingsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/shared/article-preview/article-preview.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "ArticlePreviewComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/chips/chips.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ChipsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/components/favorite-articles/favorite-articles.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FavoriteArticlesComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/interfaces/article.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "AskHN",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/interfaces/article.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Comment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/interfaces/article.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Item",
+                "coveragePercent": 0,
+                "coverageCount": "0/15",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/interfaces/article.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Job",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/interfaces/article.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -1143,149 +1665,12 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Large",
+                "filePath": "src/app/shared/services/articles.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "ArticlesService",
                 "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Primary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Secondary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Small",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedIn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedOut",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedIn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedOut",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/User.ts",
-                "type": "interface",
-                "linktype": "interface",
-                "name": "User",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/button.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "ButtonComponent",
-                "coveragePercent": 83,
-                "coverageCount": "5/6",
-                "status": "very-good"
-            },
-            {
-                "filePath": "src/stories/header.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "HeaderComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/page.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "PageComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/3",
                 "status": "low"
             }
         ]

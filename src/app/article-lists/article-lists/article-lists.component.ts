@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, NgIterable, OnInit } from "@angular/core";
 import {ArticlesService} from "../../shared/services/articles.service";
 import {Observable} from "rxjs";
 import {Story} from "../../shared/interfaces/article";
@@ -8,15 +8,12 @@ import {Story} from "../../shared/interfaces/article";
   templateUrl: './article-lists.component.html',
   styleUrls: ['./article-lists.component.scss']
 })
-export class ArticleListsComponent implements OnInit {
+export class ArticleListsComponent{
   title = 'Article List';
-  articles$: Observable<Story[]|any>
+  // articles$: Observable<Story[]>;
 
   constructor(private articlesService: ArticlesService) {
-    this.articles$ = this.articlesService.getTopArticles();
-  }
-
-  ngOnInit() {
+    // this.articles$ = this.articlesService.getTopArticles();
   }
 }
 
@@ -27,7 +24,7 @@ export class ArticleListsComponent implements OnInit {
 })
 export class AskArticlesComponent extends ArticleListsComponent implements OnInit {
   ngOnInit() {
-    super.ngOnInit();
+    //
 
     this.title = 'ask-articles';
   }
@@ -40,7 +37,7 @@ export class AskArticlesComponent extends ArticleListsComponent implements OnIni
 })
 export class BestArticlesComponent extends ArticleListsComponent implements OnInit {
   ngOnInit() {
-    super.ngOnInit();
+    //
 
     this.title = 'best-articles';
   }
@@ -53,7 +50,7 @@ export class BestArticlesComponent extends ArticleListsComponent implements OnIn
 })
 export class NewArticlesComponent extends ArticleListsComponent implements OnInit {
   ngOnInit() {
-    super.ngOnInit();
+
 
     this.title = 'new-articles';
   }
@@ -65,8 +62,8 @@ export class NewArticlesComponent extends ArticleListsComponent implements OnIni
   styleUrls: ['./article-lists.component.scss']
 })
 export class ShowArticlesComponent extends ArticleListsComponent implements OnInit {
-  public override ngOnInit() {
-    super.ngOnInit();
+  ngOnInit() {
+
 
     this.title = 'show-articles';
   }
@@ -79,7 +76,7 @@ export class ShowArticlesComponent extends ArticleListsComponent implements OnIn
 })
 export class TopArticlesComponent extends ArticleListsComponent implements OnInit {
   ngOnInit() {
-    super.ngOnInit();
+
 
     this.title = 'top-articles';
   }
